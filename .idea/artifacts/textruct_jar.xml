@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="textruct:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/textruct_jar</output-path>
+    <root id="archive" name="textruct.jar">
+      <element id="module-output" name="textruct" />
+    </root>
+  </artifact>
+</component>
