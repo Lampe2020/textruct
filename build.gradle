@@ -50,7 +50,7 @@ compileJava {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'de.textruct.Main'
+                'Main-Class': 'de.lampe2020.textruct.Main'
         )
     }
 }
