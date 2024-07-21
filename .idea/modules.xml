@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/textruct.iml" filepath="$PROJECT_DIR$/textruct.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/textruct.main.iml" filepath="$PROJECT_DIR$/.idea/modules/textruct.main.iml" />
     </modules>
   </component>
 </project>
