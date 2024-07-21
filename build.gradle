@@ -32,6 +32,8 @@ dependencies {
 
 plugins {
     id 'java'
+    id 'idea'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 repositories {
@@ -41,12 +43,18 @@ repositories {
 dependencies {
     implementation 'info.picocli:picocli:4.7.6'
     annotationProcessor 'info.picocli:picocli-codegen:4.7.6'
+    implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+    implementation 'org.jocl:jocl:2.0.5'
 }
 
 sourceSets {
     main {
         java {
             srcDirs 'src'
+        }
+        resources {
+            srcDirs "files_to_include"
         }
     }
 }
@@ -62,3 +70,17 @@ jar {
         )
     }
 }
+
+shadowJar {
+    archiveClassifier.set('')
+    mergeServiceFiles()
+    manifest {
+        attributes 'Main-Class': 'de.lampe2020.textruct.Main'
+    }
+}
+
+tasks.build {
+    dependsOn shadowJar
+}
+
+tasks.jar.enabled = false
