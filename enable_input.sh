@@ -8,3 +8,5 @@ sudo tee /etc/udev/rules.d/99-rawinput.rules << '**EOF**' > /dev/null
 KERNEL=="event*", NAME="input/%k", MODE="660", GROUP="rawinput"
 **EOF**
 #TODO: Add current user to rawinput group
+
+#TODO: Look into using `mev` for mouse input. For nicer-looking output, use -E flag, for more detailed output use no flags. Also: Find out how to discern scrolling from movements
